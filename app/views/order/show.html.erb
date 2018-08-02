@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+  <link rel="stylesheet" href="/home/css/map.css">
+  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+  <link rel="stylesheet" href="/home/css/style.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+
+  <script type="text/javascript" charset="utf-8">
+
+
+      $(document).ready(function () {
+
+
+          var date_field = $('#date_field');
+          var time_field = $('#time_field');
+          var quantity_field = $('#quantity_field');
+          var destination_field = $('#destination_field');
+          var fetch_data_button = $('#fetch_order');
+          var branch_select = $('#branch_select');
+          var quantity_select = $('#quantity_select');
+          var order_id = null;
+
+          var confirm_order = $('#confirm_order');
+
+
+          fetch_data_button.on('click', function () {
+              fetch_order();
+          });
+
+
+          function fetch_order() {
+              $.get('<%= fetch_order_path %>', {
+                  quantity: quantity_select.val(),
+                  branch: branch_select.val()
+              }, function () {
+              }).done(function (data) {
+                  order_id = data.id;
+                  time_field.html(data.time);
+                  date_field.html(data.date);
+                  quantity_field.html(data.quantity);
+                  destination_field.html(data.destination);
+              }).fail(function () {
+                  console.log('Fail to fetch Data')
+              });
+          }
+
+          // fetch order data after page load
+          fetch_order();
+
+
+          confirm_order.on('click', function () {
+              //        order_id
+          });
+
+
+      });
+  </script>
+</head>
+
+<body>
+<ons-page class="home-page">
+  <img src="/home/img/logo.png" class="home-logo">
+  <div class="order-card">
+    <img src="/home/img/cards.svg">
+    <div class="order-details">
+      <table class="details-table">
+        <tbody>
+        <tr>
+          <td>التاريخ:</td>
+          <td class="light"><span id="date_field">--</span></td>
+        </tr>
+
+        <tr>
+          <td>الوقت:</td>
+          <td class="light"><span id="time_field">--</span></td>
+        </tr>
+
+        <tr>
+          <td>الكمية المطلوبه:</td>
+          <td class="light"><span id="quantity_field">--</span></td>
+        </tr>
+
+        <tr>
+          <td>الى:</td>
+          <td class="light"><span id="destination_field">--</span></td>
+        </tr>
+        </tbody>
+      </table>
+      <ons-button id="confirm_order" class="light-button">استلام الطلب</ons-button>
+
+    </div>
+  </div>
+  <div class="text-center">
+    <ons-button id="fetch_order" class="dark-button">تحديث الطلبات</ons-button>
+  </div>
+  <div class="divider"></div>
+
+
+  <div class="text-center settings">
+
+    <p>المنطقة</p>
+
+    <ons-select id="branch_select">
+      <% Branch.all.each do |b| %>
+        <option value="<%= b.id %>"><%= b.name %></option>
+      <% end %>
+    </ons-select>
+
+
+    <p>الكمية الممكن حملها</p>
+
+    <ons-select id="quantity_select">
+      <% (2..20).each do |i| %>
+        <option value="<%= i %>"><%= i %></option>
+      <% end %>
+    </ons-select>
+
+    <p>
+      <!--<ons-button class="dark-button">تحديث</ons-button>-->
+    </p>
+  </div>
+
+
+  <p class="home-footer">Made With <span class="heart">♥</span> at #Hajj_Hackathon</p>
+</ons-page>
+</body>
+
+</html>
