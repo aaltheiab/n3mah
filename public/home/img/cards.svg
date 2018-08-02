@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 334 274" style="enable-background:new 0 0 334 274;" xml:space="preserve">
+<style type="text/css">
+	.st0{filter:url(#filter-2);}
+	.st1{fill:#FFFFFF;}
+	.st2{filter:url(#filter-4);}
+	.st3{filter:url(#filter-6);}
+	.st4{filter:url(#filter-8);}
+</style>
+<filter  filterUnits="objectBoundingBox" height="121.6%" id="filter-8" width="116.6%" x="-7.6%" y="-9.9%">
+	<feOffset  dx="2" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+	<feGaussianBlur  in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8"></feGaussianBlur>
+	<feColorMatrix  in="shadowBlurOuter1" type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.16 0"></feColorMatrix>
+</filter>
+<filter  filterUnits="objectBoundingBox" height="123.1%" id="filter-6" width="117.7%" x="-8.2%" y="-10.6%">
+	<feOffset  dx="2" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+	<feGaussianBlur  in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8"></feGaussianBlur>
+	<feColorMatrix  in="shadowBlurOuter1" type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.16 0"></feColorMatrix>
+</filter>
+<filter  filterUnits="objectBoundingBox" height="124.9%" id="filter-4" width="119.1%" x="-8.8%" y="-11.4%">
+	<feOffset  dx="2" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+	<feGaussianBlur  in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8"></feGaussianBlur>
+	<feColorMatrix  in="shadowBlurOuter1" type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.16 0"></feColorMatrix>
+</filter>
+<filter  filterUnits="objectBoundingBox" height="126.9%" id="filter-2" width="120.7%" x="-9.5%" y="-12.4%">
+	<feOffset  dx="2" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+	<feGaussianBlur  in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8"></feGaussianBlur>
+	<feColorMatrix  in="shadowBlurOuter1" type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.16 0"></feColorMatrix>
+</filter>
+<g id="Page-1">
+	<g id="Group" transform="translate(14.000000, 14.000000)">
+		<g id="Rectangle-10-Copy-6">
+			<g class="st0">
+				<path id="path-1_2_" d="M41,57h220c6.1,0,11,4.9,11,11v163.6c0,6.1-4.9,11-11,11H41c-6.1,0-11-4.9-11-11V68
+					C30,61.9,34.9,57,41,57z"/>
+			</g>
+			<g>
+				<path id="path-1_1_" class="st1" d="M41,57h220c6.1,0,11,4.9,11,11v163.6c0,6.1-4.9,11-11,11H41c-6.1,0-11-4.9-11-11V68
+					C30,61.9,34.9,57,41,57z"/>
+			</g>
+		</g>
+		<g id="Rectangle-10-Copy-5">
+			<g class="st2">
+				<path id="path-3_2_" d="M31,38h240c6.1,0,11,4.9,11,11v179c0,6.1-4.9,11-11,11H31c-6.1,0-11-4.9-11-11V49C20,42.9,24.9,38,31,38
+					z"/>
+			</g>
+			<g>
+				<path id="path-3_1_" class="st1" d="M31,38h240c6.1,0,11,4.9,11,11v179c0,6.1-4.9,11-11,11H31c-6.1,0-11-4.9-11-11V49
+					C20,42.9,24.9,38,31,38z"/>
+			</g>
+		</g>
+		<g id="Rectangle-10-Copy-4">
+			<g class="st3">
+				<path id="path-5_2_" d="M21,19h260c6.1,0,11,4.9,11,11v194.3c0,6.1-4.9,11-11,11H21c-6.1,0-11-4.9-11-11V30
+					C10,23.9,14.9,19,21,19z"/>
+			</g>
+			<g>
+				<path id="path-5_1_" class="st1" d="M21,19h260c6.1,0,11,4.9,11,11v194.3c0,6.1-4.9,11-11,11H21c-6.1,0-11-4.9-11-11V30
+					C10,23.9,14.9,19,21,19z"/>
+			</g>
+		</g>
+		<g id="Rectangle-10-Copy-3">
+			<g class="st4">
+				<path id="path-7_2_" d="M11,0h280c6.1,0,11,4.9,11,11v209.7c0,6.1-4.9,11-11,11H11c-6.1,0-11-4.9-11-11V11C0,4.9,4.9,0,11,0z"/>
+			</g>
+			<g>
+				<path id="path-7_1_" class="st1" d="M11,0h280c6.1,0,11,4.9,11,11v209.7c0,6.1-4.9,11-11,11H11c-6.1,0-11-4.9-11-11V11
+					C0,4.9,4.9,0,11,0z"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

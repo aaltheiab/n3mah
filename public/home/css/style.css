@@ -1,24 +1,29 @@
 @font-face {
     font-family: 'dubai';
-    src: url('/../../home/fonts/Dubai-Bold.ttf');
+    src: url('/../../home/fonts/Dubai-Medium.ttf');
     font-weight: bold;
 }
+
 @font-face {
     font-family: 'dubai';
     src: url('/../../home/fonts/Dubai-Regular.ttf');
     font-weight: normal;
 }
+
 @font-face {
     font-family: 'dubai';
     src: url('/../../home/fonts/Dubai-Light.ttf');
     font-weight: lighter;
 }
-html *{
-   font-family: 'dubai';
+
+html * {
+    font-family: 'dubai';
 }
+
 #sighnup .page__background {
     background: linear-gradient(304.22deg, #52D7FF 0%, #52BBDB 100%);
 }
+
 #login .page__background {
     background: url(../img/bg.png);
     background-size: cover;
@@ -27,10 +32,12 @@ html *{
 #sighnup .page__content {
     color: #fff;
 }
-#sighnup h3{
+
+#sighnup h3 {
     font-family: 'dubai';
     font-weight: bold;
 }
+
 .v-h-center {
     margin: auto;
     text-align: center;
@@ -54,7 +61,9 @@ html *{
     font-family: 'dubai';
     width: 100%;
 }
-.login-form ::placeholder,.signup-form ::placeholder{
+
+.login-form ::placeholder,
+.signup-form ::placeholder {
     color: #fff;
     opacity: 1;
 }
@@ -76,4 +85,120 @@ html *{
     color: #aaa;
     text-decoration: none;
     font-weight: 100
+}
+
+.home-page .page__background {
+    background: linear-gradient(304.22deg, #52D7FF 0%, #52BBDB 100%);
+}
+
+.home-page .home-logo {
+    height: 46px;
+    width: 76px;
+    display: block;
+    margin: auto;
+    margin: 30px auto auto
+}
+
+.home-page .order-card {
+    height: 200px;
+    width: 80%;
+    margin: 20px auto 10px;
+    text-align: center;
+    position: relative;
+    padding: 30px
+}
+
+.order-card img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: -1
+}
+
+.details-table {
+    width: 50%;
+    margin: 20px auto;
+    text-align: right;
+    direction: rtl;
+    font-weight: 400;
+    color: #000;
+}
+
+.details-table td {
+    width: 50%
+}
+
+.light-button {
+    font-family: 'dubai';
+    font-weight: normal;
+    width: 70%;
+    background: linear-gradient(157.49deg, #52D7FF 0%, #52BBDB 100%);
+    font-size: 15px;
+    border-radius: 4px
+}
+
+.light {
+    font-weight: lighter;
+    color: #9B9B9B
+}
+
+.divider {
+    box-sizing: border-box;
+    height: 0;
+    width: 80%;
+    border-bottom: 2px solid #000000;
+    opacity: 0.2;
+    margin: 20px auto;
+}
+
+.dark-button {
+    border-radius: 17px;
+    background: #00000020;
+    margin: auto;
+    width: 40%;
+    font-family: 'dubai'
+}
+.text-center{
+    text-align: center
+}
+.settings{
+    direction: rtl;
+    color: #fff
+}
+.settings p{
+    font-size: 15px
+}
+.settings .select,.settings .dark-button{
+    height: 40px;
+    width: 117px;
+    	border-radius: 4px;
+    
+}
+.settings .select{
+    padding: 1px 1px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.settings .select-input{
+    line-height: 40px; 
+    background: url('/../../home/img/arrow.png') no-repeat;
+    background-position: 10px 13px;
+}
+.settings .dark-button{
+    background: linear-gradient(157.49deg, #5A8593 0%, #3E6977 100%);
+}
+.home-footer{
+    color: #fff;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 5px;
+}
+.home-footer .heart{
+    color: red;
 }
