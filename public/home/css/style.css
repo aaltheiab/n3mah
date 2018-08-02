@@ -20,6 +20,13 @@ html * {
     font-family: 'dubai';
 }
 
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 #sighnup .page__background {
     background: linear-gradient(304.22deg, #52D7FF 0%, #52BBDB 100%);
 }
@@ -120,7 +127,7 @@ html * {
 }
 
 .details-table {
-    width: 50%;
+    width: 70%;
     margin: 20px auto;
     text-align: right;
     direction: rtl;
@@ -162,36 +169,45 @@ html * {
     width: 40%;
     font-family: 'dubai'
 }
-.text-center{
+
+.text-center {
     text-align: center
 }
-.settings{
+
+.settings {
     direction: rtl;
     color: #fff
 }
-.settings p{
+
+.settings p {
     font-size: 15px
 }
-.settings .select,.settings .dark-button{
+
+.settings .select,
+.settings .dark-button {
     height: 40px;
     width: 117px;
-    	border-radius: 4px;
-    
+    border-radius: 4px;
+
 }
-.settings .select{
+
+.settings .select {
     padding: 1px 1px;
     background-color: #fff;
     border-radius: 5px;
 }
-.settings .select-input{
-    line-height: 40px; 
+
+.settings .select-input {
+    line-height: 40px;
     background: url('/../../home/img/arrow.png') no-repeat;
     background-position: 10px 13px;
 }
-.settings .dark-button{
+
+.settings .dark-button {
     background: linear-gradient(157.49deg, #5A8593 0%, #3E6977 100%);
 }
-.home-footer{
+
+.home-footer,.order-footer {
     color: #fff;
     font-size: 12px;
     width: 100%;
@@ -199,6 +215,81 @@ html * {
     position: absolute;
     bottom: 5px;
 }
-.home-footer .heart{
+.order-footer{
+    color: #5A8593;
+}
+.home-footer .heart,.order-footer .heart {
     color: red;
+}
+.order-page .page__background{
+    background-color: #fff;
+}
+.order-header {
+    background: linear-gradient(343.43deg, #52D7FF 0%, #52BBDB 100%);
+}
+
+.order-header img {
+    height: 46px;
+    width: 76px;
+    display: block;
+    margin: auto;
+    padding: 30px 0;
+}
+
+.order-header p {
+    color: #fff;
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 0
+}
+.order-page .order-info{
+    background-color: #D8D8D820;
+    margin: 0 auto;
+    padding: 5px 0
+}
+
+.order-map {
+    height: 150px;
+    margin-top: 0;
+}
+.order-complete{
+    background-color: #fff;
+    text-align: center;
+    padding: 50px 20px
+}
+.thank-you-page{
+       color: #fff;
+}
+.thank-you-page .page__background{
+        background: linear-gradient(343.43deg, #52D7FF 0%, #52BBDB 100%);
+}
+.thamk-you-page .v-h-center{
+    width: 60%
+}
+.thank-you-header{
+    width: 100%;
+    text-align: center;
+    padding-top: 30px
+}
+.thank-you-header img{
+    margin: auto;
+    width: 70px
+}
+.thank-you-page h1{
+    font-size: 69px;
+    font-family: 'dubai';
+    font-weight: bold;
+    margin: 30px auto;
+}
+.thank-you-page h2{
+    font-weight: bold;
+    font-family: 'dubai';
+    margin: 30px auto;
+}
+.thank-you-page a{
+    text-decoration: none;
+    color: #fff;
+}
+.close img{
+    width: 20px
 }
