@@ -2,7 +2,7 @@ class Node < ActiveRecord::Base
   belongs_to :branch
   has_many :orders, as: :owner
 
-  validate :capacity, presence: true
+  validates :capacity, presence: true
 
   before_validation :set_capacity
 

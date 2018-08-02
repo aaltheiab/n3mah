@@ -9,7 +9,8 @@ module Api::V1
     # The nodes update their current quantity by hitting this end-point
     def update
       if @node.update(node_params)
-        # TODO initiate service object to process node minimum quantity requirements
+        # initiate service object to process node minimum quantity requirements
+        NodeOrderInitiatorService.new(node_id: @node.id)
         render json: {}, status: :ok
       else
         # bug report about the node not able to update itself
