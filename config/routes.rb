@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   resource :order, controller: :order, only: :show do
     collection do
       get :fetch
+      get :details
+      post :confirm
     end
   end
 

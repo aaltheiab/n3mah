@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
 
   validates :phone_number, :password, presence: true
   belongs_to :branch
+  has_many :orders
 
   def hash_password(password)
     self.password = BCrypt::Password.create(password).to_s
