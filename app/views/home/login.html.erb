@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+  <link rel="stylesheet" href="/home/css/map.css">
+  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+  <link rel="stylesheet" href="/home/css/style.css">
+</head>
+
+<body>
+<ons-page>
+
+  <ons-tabbar swipeable position="auto" class="login-tabs">
+    <ons-tab page="login.html" label="دخول" active>
+    </ons-tab>
+    <!--<ons-tab page="/home/html/sighnup.html" label="التسجيل">-->
+    </ons-tab>
+  </ons-tabbar>
+</ons-page>
+
+<template id="login.html">
+  <ons-page id="login">
+    <div class="v-h-center">
+
+      <form class="login-form" method="post" action="/session">
+        <p>
+          <ons-input id="phone" autocomplete="off" name="phone_number" modifier="underbar" placeholder="رقم الجوال" float></ons-input>
+        </p>
+        <p>
+          <ons-input id="password" modifier="underbar" name="password" type="password" placeholder="كلمة المرور" float></ons-input>
+        </p>
+        <p>
+          <a href="#" class="link-muted">نسيت كلمة المرور</a>
+        </p>
+        <p>
+
+          <button type="submit">Login</button>
+        </p>
+
+      </form>
+
+
+    </div>
+  </ons-page>
+</template>
+
+<template id="sighnup.html">
+  <ons-page id="sighnup">
+    <div class="v-h-center">
+      <form class="signup-form">
+        <img src="img/logo.png">
+        <h3>سجّل معنا</h3>
+        <p>
+          <ons-input id="phone" modifier="underbar" placeholder="رقم الجوال" float></ons-input>
+        </p>
+        <p>
+          <ons-input id="password" modifier="underbar" type="password" placeholder="كلمة المرور" float></ons-input>
+        </p>
+        <p>
+        <p>اختر المنطقة</p>
+        <ons-select id="zone">
+          <option value="a1">Zone A1</option>
+          <option value="a2">Zone A2</option>
+          <option value="a3">Zone A3</option>
+        </ons-select>
+        </p>
+        <p>
+          <ons-button>تسجيل</ons-button>
+        </p>
+      </form>
+    </div>
+  </ons-page>
+</template>
+<script src="/home/js/script.js"></script>
+</body>
+
+</html>

@@ -8,4 +8,12 @@ Rails.application.routes.draw do
     end
   end
 
+  # landing page
+  get '/login', to: 'home#login'
+
+  # create session with posting the credentials
+  post '/session', to: 'home#create'
+
+  root to: 'home#show'
+
 end
