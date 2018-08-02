@@ -29,7 +29,7 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello world"
-  bottle: "Bottle"
-  fridge: "Fridge"
+ar:
+  hello: "مرحبا بالعالم"
+  bottle: "قارورة"
+  fridge: "ثلاجة"
