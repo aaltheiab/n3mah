@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+
+  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+  <link rel="stylesheet" href="/home/css/style.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+
+  <script type="text/javascript" charset="utf-8">
+      $(document).ready(function () {
+
+          var confirm_delivery = $('#confirm_delivery');
+
+          confirm_delivery.on('click', function () {
+
+              if (confirm('Sure you have delivered ?')) {
+                  $.post('<%= confirm_delivery_order_path %>', {id: <%= @order.id %>}, function () {
+                  }).done(function () {
+                      window.location.href = "<%= thank_you_order_path %>";
+                  }).fail(function () {
+                      alert('Failed');
+                  })
+              }
+          })
+
+      })
+  </script>
+</head>
+
+<body>
+<ons-page class="order-page">
+  <div class="order-header">
+    <img src="/home/img/logo.png" class="header-logo">
+    <p>تفاصيل الطلب</p>
+  </div>
+  <div id="map" class="order-map"></div>
+  <div class="order-info">
+    <table class="details-table">
+      <tbody>
+      <tr>
+        <td>التاريخ:</td>
+        <td class="light"><%= @order.created_at.strftime('%d/%m/%Y') %></td>
+      </tr>
+      <tr>
+        <td>الوقت:</td>
+        <td class="light"><%= @order.created_at.strftime('%p %I:%M') %></td>
+      </tr>
+      <tr>
+        <td>الكمية:</td>
+        <td class="light"><%= @order.quantity %></td>
+      </tr>
+
+      <tr>
+        <td>الى:</td>
+        <td class="light"><%= "#{t('fridge')} - #{@order.owner_id}" %></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="order-complete">
+    <ons-button id="confirm_delivery" class="light-button">تأكيد وصول الصناديق</ons-button>
+  </div>
+  <div class="text-center">
+  </div>
+  <p class="order-footer">Made With <span class="heart">♥</span> at #Hajj_Hackathon</p>
+</ons-page>
+<script src="/home/js/map.js"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6JdS3wl-M6KTuu3lNI2L6dhbvNZoVmsk&callback=initMap">
+</script>
+</body>
+
+</html>

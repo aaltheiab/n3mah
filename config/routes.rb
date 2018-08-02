@@ -21,6 +21,8 @@ Rails.application.routes.draw do
       get :fetch
       get :details
       post :confirm
+      post :confirm_delivery
+      get :thank_you
     end
   end
 

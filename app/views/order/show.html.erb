@@ -4,17 +4,15 @@
 <head>
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.min.css">
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
-  <link rel="stylesheet" href="/home/css/map.css">
   <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
   <link rel="stylesheet" href="/home/css/style.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script  src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
 
   <script type="text/javascript" charset="utf-8">
 
 
       $(document).ready(function () {
-
 
           var date_field = $('#date_field');
           var time_field = $('#time_field');
@@ -55,6 +53,21 @@
 
           confirm_order.on('click', function () {
               //        order_id
+              //    post to confirm order
+              //    on success redirect to order detials
+
+              $.post('<%= confirm_order_path %>', {
+                  id: order_id,
+                  quantity: quantity_select.val()
+              }, function () {
+              }).done(function (data) {
+                  var order_id = data.id;
+                  window.location.href = "<%= details_order_path %>?id=" + order_id;
+              }).fail(function () {
+                  alert('Failed');
+              });
+
+
           });
 
 
