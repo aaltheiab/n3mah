@@ -16,13 +16,8 @@ class HomeController < ApplicationController
 
 
   def login
+    redirect_to  if current_user
   end
-
-
-
-  def show
-  end
-
 
 
   private

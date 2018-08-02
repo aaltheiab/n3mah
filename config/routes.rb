@@ -16,4 +16,10 @@ Rails.application.routes.draw do
 
   root to: 'home#show'
 
+  resource :order, controller: :order, only: :show do
+    collection do
+      get :fetch
+    end
+  end
+
 end
