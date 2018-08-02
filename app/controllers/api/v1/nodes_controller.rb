@@ -5,10 +5,14 @@ module Api::V1
 
     before_action :set_node, only: [:update]
 
+
+    # The nodes update their current quantity by hitting this end-point
     def update
       if @node.update(node_params)
+        # TODO initiate service object to process node minimum quantity requirements
         render json: {}, status: :ok
       else
+        # bug report about the node not able to update itself
         render json: {errors: @node.errors.messages}, status: 400
       end
     end
