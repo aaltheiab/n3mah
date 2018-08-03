@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   # create session with posting the credentials
   post '/session', to: 'home#create'
 
-  root to: 'home#show'
+  root to: 'order#show'
 
   resource :order, controller: :order, only: :show do
     collection do
