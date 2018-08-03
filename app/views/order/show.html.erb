@@ -77,7 +77,12 @@
 
 <body>
 <ons-page class="home-page">
-  <img src="/home/img/logo.png" class="home-logo">
+  <div class="home-header">
+    <span id="fetch_order" class="refresh">
+      <img src="/home/img/refresh.svg">
+    </span>
+    <img src="/home/img/logo.png" class="home-logo">
+  </div>
   <div class="order-card">
     <img src="/home/img/cards.svg">
     <div class="order-details">
@@ -108,13 +113,9 @@
 
     </div>
   </div>
-  <div class="text-center">
-    <ons-button id="fetch_order" class="dark-button">تحديث الطلبات</ons-button>
-  </div>
   <div class="divider"></div>
-
-
   <div class="text-center settings">
+    <h4>الاعدادات</h4>
 
     <p>المنطقة</p>
 
@@ -132,10 +133,6 @@
         <option value="<%= i %>"><%= i %></option>
       <% end %>
     </ons-select>
-
-    <p>
-      <!--<ons-button class="dark-button">تحديث</ons-button>-->
-    </p>
   </div>
 
 

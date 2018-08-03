@@ -98,16 +98,32 @@ body {
     background: linear-gradient(304.22deg, #52D7FF 0%, #52BBDB 100%);
 }
 
+.home-header {
+    display: flex;
+    flex-direction: row;
+}
+
 .home-page .home-logo {
     height: 46px;
     width: 76px;
-    display: block;
-    margin: auto;
-    margin: 30px auto auto
+    margin: 30px 10% 0 auto;
+}
+
+.home-page .refresh {
+    display: inline-block;
+    margin: 36px 0 0 30px;
+}
+
+.home-page .refresh img {
+    width: 30px;
+}
+
+.home-page .refresh:active {
+    opacity: 0.6;
 }
 
 .home-page .order-card {
-    height: 200px;
+    height: 250px;
     width: 80%;
     margin: 20px auto 10px;
     text-align: center;
@@ -145,7 +161,8 @@ body {
     width: 70%;
     background: linear-gradient(157.49deg, #52D7FF 0%, #52BBDB 100%);
     font-size: 15px;
-    border-radius: 4px
+    border-radius: 4px;
+    box-shadow: 2px 5px 16px 0 rgba(82, 187, 219, 0.16);
 }
 
 .light {
@@ -168,6 +185,7 @@ body {
     margin: auto;
     width: 40%;
     font-family: 'dubai'
+    box-shadow: 2px 5px 16px 0 rgba(90, 133, 147, 0.16);
 }
 
 .text-center {
@@ -207,7 +225,7 @@ body {
     background: linear-gradient(157.49deg, #5A8593 0%, #3E6977 100%);
 }
 
-.home-footer,.order-footer {
+.home-footer, .order-footer {
     color: #fff;
     font-size: 12px;
     width: 100%;
@@ -215,15 +233,19 @@ body {
     position: absolute;
     bottom: 5px;
 }
-.order-footer{
+
+.order-footer {
     color: #5A8593;
 }
-.home-footer .heart,.order-footer .heart {
+
+.home-footer .heart, .order-footer .heart {
     color: red;
 }
-.order-page .page__background{
+
+.order-page .page__background {
     background-color: #fff;
 }
+
 .order-header {
     background: linear-gradient(343.43deg, #52D7FF 0%, #52BBDB 100%);
 }
@@ -242,7 +264,8 @@ body {
     text-align: center;
     margin-bottom: 0
 }
-.order-page .order-info{
+
+.order-page .order-info {
     background-color: #D8D8D820;
     margin: 0 auto;
     padding: 5px 0
@@ -252,44 +275,54 @@ body {
     height: 150px;
     margin-top: 0;
 }
-.order-complete{
+
+.order-complete {
     background-color: #fff;
     text-align: center;
     padding: 50px 20px
 }
-.thank-you-page{
-       color: #fff;
+
+.thank-you-page {
+    color: #fff;
 }
-.thank-you-page .page__background{
-        background: linear-gradient(343.43deg, #52D7FF 0%, #52BBDB 100%);
+
+.thank-you-page .page__background {
+    background: linear-gradient(343.43deg, #52D7FF 0%, #52BBDB 100%);
 }
-.thamk-you-page .v-h-center{
+
+.thamk-you-page .v-h-center {
     width: 60%
 }
-.thank-you-header{
+
+.thank-you-header {
     width: 100%;
     text-align: center;
     padding-top: 30px
 }
-.thank-you-header img{
+
+.thank-you-header img {
     margin: auto;
     width: 70px
 }
-.thank-you-page h1{
+
+.thank-you-page h1 {
     font-size: 69px;
     font-family: 'dubai';
     font-weight: bold;
     margin: 30px auto;
 }
-.thank-you-page h2{
+
+.thank-you-page h2 {
     font-weight: bold;
     font-family: 'dubai';
     margin: 30px auto;
 }
-.thank-you-page a{
+
+.thank-you-page a {
     text-decoration: none;
     color: #fff;
 }
-.close img{
+
+.close img {
     width: 20px
 }
