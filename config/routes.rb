@@ -26,4 +26,10 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :nodes, only: [:index] do
+    collection do
+      get :fetch
+    end
+  end
+
 end
