@@ -17,7 +17,7 @@
 
           confirm_delivery.on('click', function () {
 
-              if (confirm('Sure you have delivered ?')) {
+              if (confirm('هل أنت متأكد من التوصيل ؟')) {
                   $.post('<%= confirm_delivery_order_path %>', {id: <%= @order.id %>}, function () {
                   }).done(function () {
                       window.location.href = "<%= thank_you_order_path %>";
