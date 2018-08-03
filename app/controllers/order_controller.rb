@@ -52,6 +52,11 @@ class OrderController < ApplicationController
   # user confirm the delivery of the boxes
   def confirm_delivery
     if @order.complete!
+      # update the owner with the refilled boxes
+      owner = @order.owner # e.g. node
+      current_quantity = owner.current_quantity # e.g. node current quantity
+      owner.update(current_quantity: current_quantity + @order.quantity)
+
       render json: {}, status: :ok
     else
       render json: {errors: @order.errors.messages}, status: :bad_request

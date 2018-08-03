@@ -1,5 +1,7 @@
 class NodeOrderInitiatorService
 
+  prepend SimpleCommand
+
   def initialize(node_id:)
     @node = Node.find(node_id)
   end
@@ -8,7 +10,6 @@ class NodeOrderInitiatorService
   def call
     # sub of the orders quantities
     sum_quantities = @node.orders.sum(:quantity)
-
     # ignore if node has more than minimum of 50 + on going orders
     return unless @node.current_quantity + sum_quantities < 50
 

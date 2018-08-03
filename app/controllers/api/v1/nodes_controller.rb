@@ -10,7 +10,7 @@ module Api::V1
     def update
       if @node.update(node_params)
         # initiate service object to process node minimum quantity requirements
-        NodeOrderInitiatorService.new(node_id: @node.id)
+        NodeOrderInitiatorService.call(node_id: @node.id)
         render json: {}, status: :ok
       else
         # bug report about the node not able to update itself
